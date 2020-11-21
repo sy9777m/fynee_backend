@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,7 +42,8 @@ INSTALLED_APPS = [
     'user',
     'rest_framework',
     'corsheaders',
-    'module',
+    'krx',
+    'upbit',
 ]
 
 REST_FRAMEWORK = {
@@ -84,10 +89,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fynee',
-        'USER': 'root',
-        'PASSWORD': 'msyaegis2016*',
-        'HOST': 'localhost',
-        'PORT': '',
+        'USER': 'siyun',
+        'PASSWORD': env('PSQL_PASSWORD'),
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
