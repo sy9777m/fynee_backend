@@ -8,7 +8,8 @@ class UpbitMarket(models.Model):
     english_name = models.CharField(max_length=64)
 
     class Meta:
-        db_table = 'Upbit Market'
+        db_table = 'Upbit Market Data'
+        verbose_name = 'Upbit Market'
 
     def __str__(self) -> str:
         return self.english_name
@@ -43,7 +44,8 @@ class UpbitTicker(models.Model):
     timestamp = models.CharField(max_length=64)
 
     class Meta:
-        db_table = 'Upbit Ticker'
+        db_table = 'Upbit Ticker Data'
+        verbose_name = 'Upbit Ticker'
 
     def __str__(self) -> str:
         return self.market
@@ -63,7 +65,8 @@ class UpbitMinuteCandle(models.Model):
     unit = models.IntegerField()
 
     class Meta:
-        db_table = 'Upbit Minute Candle'
+        db_table = 'Upbit Minute Candle Data'
+        verbose_name = 'Upbit Minute Candle'
 
     def __str__(self) -> str:
         return self.market
@@ -85,7 +88,8 @@ class UpbitDayCandle(models.Model):
     change_rate = models.FloatField()
 
     class Meta:
-        db_table = 'Upbit Day Candle'
+        db_table = 'Upbit Day Candle Data'
+        verbose_name = 'Upbit Day Candle'
 
     def __str__(self) -> str:
         return self.market
@@ -105,7 +109,8 @@ class UpbitWeekCandle(models.Model):
     first_day_of_period = models.DateField()
 
     class Meta:
-        db_table = 'Upbit Week Candle'
+        db_table = 'Upbit Week Candle Data'
+        verbose_name = 'Upbit Week Candle'
 
     def __str__(self) -> str:
         return self.market
@@ -125,7 +130,8 @@ class UpbitMonthCandle(models.Model):
     first_day_of_period = models.DateField()
 
     class Meta:
-        db_table = 'Upbit Month Candle'
+        db_table = 'Upbit Month Candle Data'
+        verbose_name = 'Upbit Month Candle'
 
     def __str__(self) -> str:
         return self.market
@@ -145,6 +151,7 @@ class UpbitTicks(models.Model):
 
     class Meta:
         db_table = 'Upbit Tick Data'
+        verbose_name = 'Upbit Tick'
 
     def __str__(self) -> str:
         return self.market
