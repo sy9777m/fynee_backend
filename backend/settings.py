@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'krx',
     'upbit',
+    'home',
 ]
 
 REST_FRAMEWORK = {
