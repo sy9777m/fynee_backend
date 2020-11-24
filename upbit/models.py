@@ -11,7 +11,7 @@ class UpbitMarket(models.Model):
         db_table = 'Upbit Market'
 
     def __str__(self) -> str:
-        self.english_name
+        return self.english_name
 
 
 class UpbitTicker(models.Model):
@@ -46,7 +46,7 @@ class UpbitTicker(models.Model):
         db_table = 'Upbit Ticker'
 
     def __str__(self) -> str:
-        self.market
+        return self.market
 
 
 class UpbitMinuteCandle(models.Model):
@@ -66,7 +66,7 @@ class UpbitMinuteCandle(models.Model):
         db_table = 'Upbit Minute Candle'
 
     def __str__(self) -> str:
-        self.market
+        return self.market
 
 
 class UpbitDayCandle(models.Model):
@@ -88,7 +88,7 @@ class UpbitDayCandle(models.Model):
         db_table = 'Upbit Day Candle'
 
     def __str__(self) -> str:
-        self.market
+        return self.market
 
 
 class UpbitWeekCandle(models.Model):
@@ -108,7 +108,7 @@ class UpbitWeekCandle(models.Model):
         db_table = 'Upbit Week Candle'
 
     def __str__(self) -> str:
-        self.market
+        return self.market
 
 
 class UpbitMonthCandle(models.Model):
@@ -128,7 +128,7 @@ class UpbitMonthCandle(models.Model):
         db_table = 'Upbit Month Candle'
 
     def __str__(self) -> str:
-        self.market
+        return self.market
 
 
 class UpbitTicks(models.Model):
@@ -147,4 +147,4 @@ class UpbitTicks(models.Model):
         db_table = 'Upbit Tick Data'
 
     def __str__(self) -> str:
-        self.market
+        return self.market

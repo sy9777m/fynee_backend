@@ -18,4 +18,4 @@ class KRXListing(models.Model):
         db_table = 'KRX Listing'
 
     def __str__(self) -> str:
-        self.name
+        return self.name
